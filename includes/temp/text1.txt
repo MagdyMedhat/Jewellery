@@ -1,0 +1,67 @@
+<article id="mainOfferCont" class="clearfix">
+    <section class="grid_4">
+      <div class="box_cont posR">
+        <div class="mainImageCont loading"><img class="mainImage" src="temp/sample-1.jpg" width="220" height="251"></div>
+        <div class="box_images_btns"> <img src="temp/sample-1-small.jpg" data-src="temp/sample-1.jpg" width="35" height="40"> <img src="temp/sample-2-small.jpg" data-src="temp/sample-2.jpg" width="35" height="40"> <img src="temp/sample-3-small.jpg" data-src="temp/sample-3.jpg" width="35" height="40"> </div>
+      </div>
+    </section>
+    <section class="grid_12">
+      <article class="mainContent row">
+        <h2>Sindbad Amusement Park, Heliopolis</h2>
+        <h3>Lorem Ipsum is simply dummy text</h3>
+        <div id="tabs1" class="tabs" class="clearfix">
+            <ul>
+              <li><a href="#tabs-1">Offer</a></li>
+              <li><a href="#tabs-2">Vendor</a></li>
+            </ul>
+            <div id="tabs-1">
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+            <div id="tabs-2">
+              <p>typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+              <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            </div>
+        </div>
+      </article>
+      <footer class="clearfix">
+        <div class="row">
+          <div id="timer" class="grid_5 alpha"></div>
+          <script>
+		  
+        </script>
+          <div class="grid_7 omega clearfix">
+            <ul class="fl list_share_icons">
+              <li><a class="lis_FB_icon socialLink" href="#" title="Share through Facebook">facebook</a></li>
+              <li><a class="lis_Tw_icon socialLink" href="#" title="Share through Twitter">twitter</a></li>
+              <li>like button here</li>
+            </ul>
+            <a href="#" class="buy fr">Buy</a> </div>
+          <div class="clear"></div>
+        </div>
+        <div class="row"><span class="counter">128</span> BOUGHT Deal is on, only <span class="counter">72</span> left</div>
+        <div id="progressbar"></div>
+        <script>
+		// click on thumbs
+		$('#mainOfferCont .box_images_btns img').click(function(){
+			var href = $(this).attr('data-src');
+			// change the src
+			$('#mainOfferCont .mainImage').attr('src',href).imagesLoaded(function(){
+				$(this).hide().fadeIn(500);
+			});
+		})
+		// tabs
+		$( "#mainOfferCont #tabs1" ).tabs();
+        // timer
+        $('#mainOfferCont #timer').countdown({
+        	until: new Date(2013,11-1,29)
+        });
+		// progress
+		$(function() {
+			$( "#mainOfferCont #progressbar" ).progressbar({
+				value: 80
+			});
+		});
+		</script>
+      </footer>
+    </section>
+  </article>
